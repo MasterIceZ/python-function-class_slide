@@ -130,7 +130,7 @@ find_number([293, 21, 391, 3903, 1, 2, 332, 1212], 2)
 
 ## Application of Function
 
-### Recursions
+### Recursion
 
 $a_n = a_{n-1} + a_{n-2}$  
 when $a_1 = 1$, $a_2 = 1$
@@ -177,5 +177,26 @@ def func(n: int):
 ```
 ---
 
+## Application of Function
+
+### Shorten Your Code!
+
+```py
+for i in range(1, 21, 1):
+	for j in range(1, j + 1, 1): print(j, end=" ")
+	print("")
+for i in range(1, 21, 1):
+	for j in range(1, j + 1, 1): print(j, end=" ")
+	print("")
+for i in range(1, 21, 1):
+	for j in range(1, j + 1, 1): print(j, end=" ")
+	print("")
+```
+
+---
+
 # Class
+
 ## What is class?
+
+Since ``Python`` is an **object oriented programming(OOP)** language. Almost every thing in ``Python`` is an object!
