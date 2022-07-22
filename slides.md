@@ -135,7 +135,7 @@ find_number([293, 21, 391, 3903, 1, 2, 332, 1212], 2)
 $a_n = a_{n-1} + a_{n-2}$  
 when $a_1 = 1$, $a_2 = 1$
 
-```py
+```py {all|2-3|4|all}
 def a_n(n: int):
 	if n == 1 or n == 2:
 		return 1
@@ -149,10 +149,10 @@ def a_n(n: int):
 
 ```mermaid
 graph TD
-	A[a_n(4)] --> B[a_n(3)]
-	A --> C[a_n(2)]
-	B --> D[a_n(2)]
-	B --> E[a_n(1)]
+	A[a_4] --> B[a_3]
+	A --> C[a_2]
+	B --> D[a_2]
+	B --> E[a_1]
 ```
 
 ---
@@ -182,27 +182,32 @@ def func(n: int):
 ### Shorten Your Code!
 
 ```py
-for i in range(1, 21, 1):
+for i in range(1, 25, 1):
 	for j in range(1, i + 1, 1): print(j, end=" ")
 	print("")
-for i in range(1, 21, 1):
+for i in range(1, 30, 1):
 	for j in range(1, i + 1, 1): print(j, end=" ")
 	print("")
-for i in range(1, 21, 1):
+for i in range(1, 12, 1):
 	for j in range(1, i + 1, 1): print(j, end=" ")
 	print("")
 ```
 
 As you can see, this piece of code has 3 times of for loops which can optimize to
+---
+
+## Application of Function
+
+### Shorten Your Code!
 
 ```py
-def func():
-	for i in range(1, 21, 1):
+def func(n: int):
+	for i in range(1, n, 1):
 		for j in range(1, i + 1, 1): print(j, end=" ")
 		print("")
-func()
-func()
-func() 
+func(25)
+func(30)
+func(12) 
 ```
 
 ---
@@ -324,4 +329,6 @@ class Student:
 	def get_fullname(self):
 		return self.name[0] + " " + self.name[1]
 ```
+---
+See full slide at: https://mastericez.github.io/url/seminar
 ---
