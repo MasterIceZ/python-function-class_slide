@@ -1,6 +1,5 @@
 ---
 theme: geist
-class: 'text-center'
 lineNumbers: true
 ---
 
@@ -12,6 +11,7 @@ lineNumbers: true
 <br>
 
 # Function & Class
+Borworntat Dendumrongkul
 
 ---
 
@@ -200,3 +200,116 @@ for i in range(1, 21, 1):
 ## What is class?
 
 Since ``Python`` is an **object oriented programming(OOP)** language. Almost every thing in ``Python`` is an object!
+
+```mermaid
+graph TD
+	A[Object] --> B[Data]
+	A --> C[Method]
+```
+
+---
+
+## What is class?
+
+### Data
+
+``Data`` which stores in the object.
+
+### Method
+
+``Function`` which created for the object.
+---
+
+## How to define class?
+
+|syntax|definition|
+|---|---|
+|``class``|object in ``python``|
+
+---
+
+## How to define class?
+
+<br>
+syntax:
+```py
+class <name>:
+	# methods & data
+```
+
+<br>
+example:
+```py
+class student:
+	# data
+	name = str()
+	age = int()
+
+	# method
+	def __init__(self, a: str, b: int):
+		self.name = a
+		self.age = b
+```
+---
+
+## How to define class?
+
+### What is ``__init__(self)``?
+
+``__init(self, <args>)`` is an special function which called when create object.
+
+<br>
+syntax:
+```py
+...
+	def __init__(self, a: str, b: int):
+		self.name = a
+		self.age = b
+...
+```
+
+### What is ``self``?
+``self`` is a syntax which being used to refer to **this** object.
+---
+
+## How to define class?
+
+### How to create others function?
+
+Other function can created in normal way but every function must have ``self`` as an argument.
+
+<br>
+syntax:
+```py
+	def <name>(self, <args>):
+		# do something
+```
+
+<br>
+example:
+```py
+...
+	def get_name(self):
+		return self.name
+...
+```
+---
+
+## Why class?
+
+Class is being used to stores specific data since basic datatype cannot store these kind of data.  
+e.g. student's data, node of linked list
+
+<br>
+example of student's data:
+```py
+class Student:
+	name = [str() for i in range(2)]
+	age = int()
+	def __init__(self, name, surname, age):
+		self.name = [name, surname]
+		self.age = age
+	def get_fullname(self):
+		return self.name[0] + " " + self.name[1]
+```
+---
