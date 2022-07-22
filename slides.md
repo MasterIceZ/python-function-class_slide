@@ -17,15 +17,6 @@ lineNumbers: true
 
 # Function
 
----
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 ## What is Function?
 
 <br>
@@ -184,3 +175,7 @@ def func(n: int):
 	func(n - 1)
 	print(n)
 ```
+---
+
+# Class
+## What is class?
