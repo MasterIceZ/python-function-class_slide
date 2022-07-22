@@ -149,10 +149,10 @@ def a_n(n: int):
 
 ```mermaid
 graph TD
-    A[a_n(4)] --> B[a_n(3)]
-    A --> C[a_n(2)]
-    B --> D[a_n(2)]
-    B --> E[a_n(1)]
+	A[a_n(4)] --> B[a_n(3)]
+	A --> C[a_n(2)]
+	B --> D[a_n(2)]
+	B --> E[a_n(1)]
 ```
 
 ---
@@ -183,14 +183,26 @@ def func(n: int):
 
 ```py
 for i in range(1, 21, 1):
-	for j in range(1, j + 1, 1): print(j, end=" ")
+	for j in range(1, i + 1, 1): print(j, end=" ")
 	print("")
 for i in range(1, 21, 1):
-	for j in range(1, j + 1, 1): print(j, end=" ")
+	for j in range(1, i + 1, 1): print(j, end=" ")
 	print("")
 for i in range(1, 21, 1):
-	for j in range(1, j + 1, 1): print(j, end=" ")
+	for j in range(1, i + 1, 1): print(j, end=" ")
 	print("")
+```
+
+As you can see, this piece of code has 3 times of for loops which can optimize to
+
+```py
+def func():
+	for i in range(1, 21, 1):
+		for j in range(1, i + 1, 1): print(j, end=" ")
+		print("")
+func()
+func()
+func() 
 ```
 
 ---
