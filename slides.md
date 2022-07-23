@@ -15,6 +15,16 @@ Borworntat Dendumrongkul
 
 ---
 
+<br>
+<br>
+<br>
+<br>
+<center>
+<img src="https://github.com/MasterIceZ/archive/raw/main/seminar.png" />
+</center>
+
+---
+
 # Function
 
 ## What is Function?
@@ -149,6 +159,7 @@ def a_n(n: int):
 
 ```mermaid
 graph TD
+direction LR
 	A[a_4] --> B[a_3]
 	A --> C[a_2]
 	B --> D[a_2]
@@ -310,6 +321,7 @@ example:
 		return self.name
 ...
 ```
+
 ---
 
 ## Why class?
@@ -329,6 +341,87 @@ class Student:
 	def get_fullname(self):
 		return self.name[0] + " " + self.name[1]
 ```
+
 ---
-See full slide at: https://mastericez.github.io/url/seminar
+
+## Application of class
+
+### Datatype
+
+```py
+...
+class CropOptions:
+    CROP = 0
+    PRESERVE = 1
+
+
+class PosOptions:
+    CENTER = 0
+    START = 1
+    END = 2
+...
+```
+
+source: [Golden Frame, Leomotors](https://github.com/Leomotors/golden-frame)
 ---
+
+## Application of class
+
+### Object Oriented Programming
+
+```py
+class Notify :
+    _version = "1.0.0"
+    _token = ""
+    def __init__(self, _token=""):
+        self.token = _token
+
+    def version(self):
+        return self._version
+    
+    def setKey(self, token):
+        try:
+            self._token = token
+            return True
+        except:
+            return False
+	...
+```
+
+source: [Line Notify, MasterIceZ](https://github.com/MasterIceZ/LineNotify)
+---
+
+## Application of class
+
+### Use it with arrays or list
+
+Stores your data with a special data type
+
+example:
+```py
+class Student:
+	name = [str() for i in range(2)]
+	age = int()
+	def __init__(self, name, surname, age):
+		self.name = [name, surname]
+		self.age = age
+	def get_fullname(self):
+		return self.name[0] + " " + self.name[1]
+ls = []
+for i in range(1, 11, 1):
+	fullName = input() 
+	ls.append(Student(fullName.split()[0], fullName.split()[1], int(input())))
+print("\n".join(x.get_fullname() for x in ls))
+```
+
+---
+
+<br>
+
+
+<center>
+<h2> Full Slide </h2>
+<img src="https://github.com/MasterIceZ/archive/raw/main/seminar.png" />
+<br>
+<a href="https://python-function-class-slide-2909.vercel.app/">https://python-function-class-slide-2909.vercel.app/</a>
+</center>
